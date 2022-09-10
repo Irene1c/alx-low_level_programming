@@ -5,7 +5,7 @@
 /**
  * main - Entry point
  *
- * Description:'Print whether positive, zero or negative number'
+ * Description:'If whether positive, zero or negative number'
  *
  * Return:Always Zero(0)
  */

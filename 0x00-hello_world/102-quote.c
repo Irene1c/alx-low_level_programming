@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: Size of string in C
+ * Description: Sizeof string in C
  *
  * Return: Always zero(0)
  */

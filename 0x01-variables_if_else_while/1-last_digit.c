@@ -5,7 +5,7 @@
 /**
  * main - Entry point
  *
- * Description:'If whether positive, zero or negative number'
+ * Description:'If last digit is 5 or greater than 5'
  *
  * Return:Always Zero(0)
  */

@@ -11,7 +11,7 @@ int main(void)
 {
 	int i = '0';
 	int a = '1';
-	int b = 'b';
+	int b = '2';
 
 	for (i = '0'; i <= '9'; i++)
 

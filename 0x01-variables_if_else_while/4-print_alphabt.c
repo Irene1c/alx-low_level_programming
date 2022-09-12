@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: 'To print alphabets in lower case using putchar'
+ * Description: 'To print alphabets in lowercase excluding e and q using'
  *
  * Return:Always zero(0)
  */

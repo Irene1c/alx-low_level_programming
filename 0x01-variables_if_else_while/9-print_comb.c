@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: 'Print all possible combinations of single digits'
+ * Description: 'Print all combinations of single digits numbers'
  *
  * Return:Always zero(0)
  */

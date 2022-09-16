@@ -10,12 +10,19 @@ void print_square(int size)
 {
 	int i, b;
 
-	for (i = 0; i < size; ++i)
+	if (size > 0)
 	{
-		for (b = 0; b < size; ++b)
+		for (i = 0; i < size; ++i)
 		{
-			_putchar('#');
+			for (b = 0; b < size; ++b)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
 		}
+	}
+	else if (size <= 0)
+	{
 		_putchar('\n');
 	}
 }

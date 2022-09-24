@@ -3,7 +3,7 @@
 /**
  * main - entry point
  *
- * Rwturn: zero
+ * Return: zero
  */
 int main(void)
 {

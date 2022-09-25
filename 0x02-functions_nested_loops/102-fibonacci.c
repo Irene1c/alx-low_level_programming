@@ -21,7 +21,7 @@ int main(void)
 		n2 = n;
 		n = n1 + n2;
 	}
-	while (i = 50)
+	while ((i = 50))
 	{
 		printf("%ld\n", n);
 		break;

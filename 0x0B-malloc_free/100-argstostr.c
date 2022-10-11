@@ -23,8 +23,8 @@ char *argstostr(int ac, char **av)
 			c = c + 1;
 		}
 	}
-	c++;
-	str = malloc(sizeof(char) * (c + 1));
+	c += ac;
+	str = malloc(sizeof(char) * c + 1);
 	if (str == NULL)
 	{
 		return (NULL);

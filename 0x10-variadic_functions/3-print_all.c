@@ -15,11 +15,11 @@ void print_all(const char * const format, ...)
 	char *sep = ", ";
 
 	va_start(args, format);
-	while (i < format[i])
+	while (format && format[i])
 	{
 		i++;
 	}
-	while (format[a])
+	while (format && format[a])
 	{
 		if (a == i - 1)
 		{

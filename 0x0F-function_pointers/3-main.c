@@ -14,24 +14,20 @@ int main(int argc, char **argv)
 	char *op;
 	int (*ptr)(int, int);
 
-	a = atoi(argv[1]);
-	op = argv[2];
-	b = atoi(argv[3]);
-
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
+
+	a = atoi(argv[1]);
+	op = argv[2];
+	b = atoi(argv[3]);
+
 	if (get_op_func(argv[2]) == NULL || argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
-	}
-	if ((*op == '/' || *op == '%') && ((argv[3]) == 0))
-	{
-		printf("Error\n");
-		exit(100);
 	}
 	ptr = get_op_func(op);
 	printf("%d\n", ptr(a, b));

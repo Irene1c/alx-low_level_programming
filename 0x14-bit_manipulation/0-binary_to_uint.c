@@ -10,10 +10,7 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int value = 0;
 	int i = 0;
 	int base = 1;
-	int len = 0;
-	int j;
 
-	len = _strlen(b);
 	if (b == NULL)
 	{
 		return (0);
@@ -26,9 +23,9 @@ unsigned int binary_to_uint(const char *b)
 		}
 		i++;
 	}
-	for (j = len - 1; j >= 0; j--)
+	for (; i >= 0; i--)
 	{
-		if (b[j] == '1')
+		if (b[i] == '1')
 		{
 			value += base;
 		}
@@ -36,19 +33,3 @@ unsigned int binary_to_uint(const char *b)
 	}
 	return (value);
 }
-/**
- * _strlen - length of string
- * @s: the string
- * Return: length
- */
-int _strlen(const char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-

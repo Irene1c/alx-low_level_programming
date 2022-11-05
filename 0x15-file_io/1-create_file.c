@@ -9,10 +9,9 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
-	int len;
+	int len = 0;
 	int bytes;
 
-	len = _strlen(text_content);
 	if (filename == NULL)
 	{
 		return (-1);
@@ -26,25 +25,15 @@ int create_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
+	while (text_content[len] != '\0')
+	{
+		len++;
+	}
 	bytes = write(fd, text_content, len);
 	if (bytes == -1)
 	{
 		return (-1);
 	}
+	close(fd);
 	return (1);
-}
-/**
- * _strlen - length of string
- * @s: the string
- * Return: length
- */
-int _strlen(const char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
 }

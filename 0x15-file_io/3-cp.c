@@ -44,19 +44,21 @@ ssize_t read_write(int fd1, int fd2, char *file_from, char *file_to)
 	int count;
 	char buf[1024];
 
-	count = read(fd1, buf, 1024);
-	if (count == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
-		exit(98);
-	}
-	buf[count] = '\0';
-	bytes = write(fd2, buf, count);
-	if (bytes == -1 || bytes != count)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-		exit(99);
-	}
+	do {
+		count = read(fd1, buf, 1024);
+		if (count == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+			exit(98);
+		}
+		buf[count] = '\0';
+		bytes = write(fd2, buf, count);
+		if (bytes == -1 || bytes != count)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+			exit(99);
+		}
+	} while (count == 1024);
 	return (count);
 }
 /**

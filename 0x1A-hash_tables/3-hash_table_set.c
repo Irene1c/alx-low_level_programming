@@ -29,12 +29,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		new_item->key = strdup(key);
 		new_item->value = strdup(value);
 		item = new_item;
+		return (1);
 	}
 	else if (item != NULL)
 	{
 		if (strcmp(item->key, key) == 0)
 		{
 			item->value = strdup(value);
+			return (1);
 		}
 	}
 	else
@@ -43,6 +45,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		new_item->value = strdup(value);
 		new_item->next = item;
 		item = new_item;
+		return (1);
 	}
 	return (1);
 }

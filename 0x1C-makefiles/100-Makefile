@@ -6,7 +6,6 @@ CFLAGS= -Wall -Werror -Wextra -pedantic
 
 all: $(NAME)
 
--include $(wildcard *.d)
 $(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 

@@ -6,8 +6,9 @@ CFLAGS= -Wall -Werror -Wextra -pedantic
 
 all: $(NAME)
 
+-include $(wildcard *.d)
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $(NAME) -I.
+	$(CC) $(OBJ) -o $(NAME)
 
 .PHONY: clean oclean fclean re
 

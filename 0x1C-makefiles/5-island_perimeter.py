@@ -18,6 +18,6 @@ def island_perimeter(grid):
                         c += 1
                     if grid[i + 1][j] == 0:
                         c += 1
-            except IndeexError:
+            except IndexError:
                 c += 1
     return c

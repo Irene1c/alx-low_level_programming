@@ -20,3 +20,5 @@ int **allocate_map(int n, int m)
      return (map);
 }
 ```
+
+7. time complexity (average case) of a jump search in an array of size n, using step = sqrt(n)

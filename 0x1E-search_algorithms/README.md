@@ -21,4 +21,6 @@ int **allocate_map(int n, int m)
 }
 ```
 
-7. time complexity (average case) of a jump search in an array of size n, using step = sqrt(n)
+* time complexity (average case) of a jump search in an array of size n, using step = sqrt(n)
+* time complexity (average case) of a jump search in a singly linked list of size n, using step = sqrt(n)
+* time complexity (average case) of a jump search in a skip list of size n, with an express lane using step = sqrt(n)
